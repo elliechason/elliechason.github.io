@@ -52,8 +52,8 @@ contract Ballot {
             !voters[voter].voted,
             "The voter already voted.");
 
-        voters[voter].delegate == voter;
-        voters[voter].approved == true;
+        voters[voter].delegate = voter;
+        voters[voter].approved = true;
         require(
             voters[voter].approved != true,
             "Saved at least local");   
